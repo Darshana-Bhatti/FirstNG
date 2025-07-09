@@ -1,0 +1,166 @@
+/* === FORM STYLE === */
+form {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #f1f1f1;
+  box-shadow: 0 0 15px rgba(122, 92, 255, 0.5), 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* === INPUTS === */
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #fff;
+  transition: 0.2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #7a5cff;
+  box-shadow: 0 0 5px #7a5cff88;
+}
+
+/* === LABEL === */
+label {
+  font-weight: 600;
+}
+
+/* === BUTTONS === */
+button {
+  width: 100%;
+  background-color: #7a5cff;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #6240ff;
+  box-shadow: 0 0 10px #7a5cffb0, 0 0 20px #7a5cff80;
+}
+
+/* === FORM BUTTON GROUP === */
+.form-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.form-buttons button {
+  flex: 1;
+}
+
+/* === TASK LIST AREA === */
+.task-list {
+  max-width: 600px;
+  margin: 30px auto;
+  color: #f1f1f1;
+}
+
+.task-list h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* === TASK CARD === */
+.task-card {
+  background-color: #2a2a2a;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(122, 92, 255, 0.4), 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: 0.3s, transform 0.2s ease;
+}
+
+.task-card:hover {
+  box-shadow: 0 0 20px rgba(122, 92, 255, 0.6), 0 6px 18px rgba(0, 0, 0, 0.6);
+  transform: translateY(-3px);
+}
+
+/* === TASK HEADER === */
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-header h4 {
+  margin: 0;
+}
+
+/* === STATUS STYLES === */
+.task-header span {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+span.Pending {
+  background-color: #ffc107;
+  color: #000;
+}
+
+span.Completed {
+  background-color: #28a745;
+  color: #fff;
+}
+
+/* === PRIORITY STYLES === */
+span.High {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: 6px;
+}
+
+span.Medium {
+  background-color: #ffc107;
+  color: #000;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: 6px;
+}
+
+span.Low {
+  background-color: #28a745;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: 6px;
+}
+
+/* === TASK BUTTONS === */
+.task-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.task-actions button {
+  flex: 1;
+}
+
+.task-actions .delete {
+  background-color: #dc3545;
+}

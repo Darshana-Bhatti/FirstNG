@@ -1,0 +1,70 @@
+<!-- Task Form -->
+<form #taskForm="ngForm">
+  <div class="form-group">
+    <label>Task</label>
+    <input type="text" [(ngModel)]="task.name" name="name" required />
+  </div>
+
+  <div class="form-group">
+    <label>Description</label>
+    <textarea [(ngModel)]="task.description" name="description"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label>Priority</label>
+    <select [(ngModel)]="task.priority" name="priority" required>
+      <option value="" disabled>Select priority</option>
+      <option value="High">High 🔴</option>
+      <option value="Medium">Medium 🟡</option>
+      <option value="Low">Low 🟢</option>
+    </select>
+  </div>
+
+ <div class="form1" style="display: flex; justify-content: space-around;">
+     <div class="form-group">
+    <label>Start Date</label>
+    <input type="date" [(ngModel)]="task.startDate" name="startDate" [min]="today"(change)="onStartDateChange($event)" required/>
+  </div>
+
+  <div class="form-group">
+    <label>End Date</label>
+    <input type="date" [(ngModel)]="task.endDate" name="endDate"[min]="minEndDate"required />
+  </div>
+ </div>
+  <div class="form-buttons">
+    <button type="button" (click)="addTask()" [disabled]="isEditMode">
+      Add Task ➕
+    </button>
+    <button type="button" (click)="updateTask()" [disabled]="!isEditMode">
+      Update Task ✏️
+    </button>
+  </div>
+</form>
+
+<!-- Task List -->
+<div class="task-list" *ngIf="taskList.length > 0">
+  <h3>Your Tasks</h3>
+
+  <div class="task-card" *ngFor="let t of taskList; let i = index">
+    <div class="task-header">
+      <h4>{{ t.name }}</h4>
+      <span [ngClass]="t.status">{{ t.status }}</span>
+    </div>
+
+    <p><strong>Start Date:</strong> {{ t.startDate }}</p>
+    <p><strong>End Date:</strong> {{ t.endDate }}</p>
+    <p><strong>Priority:</strong>
+      <span [ngClass]="t.priority">{{ t.priority }}</span>
+    </p>
+    <p><strong>Description:</strong> {{ t.description }}</p>
+
+    <div class="task-actions">
+      <button (click)="toggleStatus(i)">
+        {{ t.status === 'Pending' ? 'Mark Completed ✅' : 'Mark Pending ⏳' }}
+      </button>
+      <button (click)="editTask(i)">Edit ✏️</button>
+      <button class="delete" (click)="deleteTask(i)">Delete 🗑️</button>
+    </div>
+  </div>
+</div>
+

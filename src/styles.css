@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0e0e0e, #1c1c1c);
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  background-attachment: fixed;
+  background-size: cover;
+  transition: background 0.3s ease-in-out;
+}

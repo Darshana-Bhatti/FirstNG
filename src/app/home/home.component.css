@@ -1,0 +1,87 @@
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 60vh;
+  background: linear-gradient(135deg, #1e1e1e, #121212);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  color: #00d9ff;
+  text-shadow: 0 0 20px #00d9ff40;
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-top: 12px;
+  color: #ccc;
+  animation: fadeUp 1.2s ease-out forwards;
+}
+
+/* Project Cards */
+.project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 20px;
+}
+
+.project-card {
+  width: 280px;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 8px 25px rgba(0, 217, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.project-card h3 {
+  color: #00d9ff;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(0, 217, 255, 0.3);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+}
