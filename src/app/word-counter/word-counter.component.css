@@ -1,0 +1,67 @@
+/* Outer Container */
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #1b1b1b, #252525);
+  color: #ffffff;
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.2), 0 0 60px rgba(0, 255, 204, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Title */
+.container h2 {
+  text-align: center;
+  color: #00ffe0;
+  font-size: 30px;
+  margin-bottom: 25px;
+  text-shadow: 0 0 5px #00ffe0, 0 0 2px #fff;
+}
+
+/* Textarea Styling */
+textarea {
+  width: 90%;
+  height: 160px;
+  padding: 15px 20px;
+  font-size: 16px;
+  border-radius: 14px;
+  background: #202020;
+  color: #ffffff;
+  border: 1px solid #2a2a2a;
+  outline: none;
+  box-shadow: inset 0 0 10px rgba(0, 255, 204, 0.1);
+  resize: none;
+  transition: box-shadow 0.3s ease;
+}
+
+textarea:focus {
+  box-shadow: 0 0 10px #00ffd5, 0 0 20px #00ffd5;
+}
+
+/* Results Box */
+.results {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Each Result Line */
+.results h4 {
+  background: #1c1c1c;
+  padding: 12px 18px;
+  border-left: 5px solid #00ffd5;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #e0ffff;
+  box-shadow: 0 4px 12px rgba(0, 255, 204, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.results h4:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 16px rgba(0, 255, 204, 0.4);
+}

@@ -1,1 +1,11 @@
-<p>word-counter works!</p>
+You said:
+<div class="container">
+  <h2>Word & Sentence Counter</h2>
+  <textarea [(ngModel)]="textInput"  rows="6"cols="50"placeholder="Please enter your text here..."></textarea>
+  <div class="results">
+    <h4>Total Words: {{ getWordCount() }}</h4>
+    <h4>Total Characters (with space): {{ getCharCount() }}</h4>
+    <h4>Total Characters (without space): {{ getCharCountWithoutSpace() }}</h4>
+    <h4>Total Sentences: {{ getSentenceCount() }}</h4>
+  </div>
+</div> 
