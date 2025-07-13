@@ -7,13 +7,15 @@ import { HomeComponent } from './home/home.component';
 import { WordCounterComponent } from './word-counter/word-counter.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { FormsModule } from '@angular/forms';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     WordCounterComponent,
-    TodoListComponent
+    TodoListComponent,
+    CalculatorComponent
   ],
   imports: [
     BrowserModule,
