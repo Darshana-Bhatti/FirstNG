@@ -6,8 +6,12 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { WordCounterComponent } from './word-counter/word-counter.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { RegisterformComponent } from './registerform/registerform.component';
+import { LoginformComponent } from './loginform/loginform.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -15,12 +19,16 @@ import { CalculatorComponent } from './calculator/calculator.component';
     HomeComponent,
     WordCounterComponent,
     TodoListComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    RegisterformComponent,
+    LoginformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

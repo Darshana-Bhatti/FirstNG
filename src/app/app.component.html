@@ -1,7 +1,7 @@
 <nav class="navbar">
   <div class="logo">Darshna</div>
   <ul class="nav-links">
-    <li><a routerLink="">Home</a></li>
+    <li><a routerLink="home">Home</a></li>
 
     <li class="dropdown">
       <span>Projects <i class="arrow">&#9662;</i></span>
@@ -9,12 +9,13 @@
         <li><a routerLink="wordC">WordCounter</a></li>
         <li><a routerLink="cal">Calculator</a></li>
         <li><a routerLink="todo">Task Tracker</a></li>
-        <li><a routerLink="/weather-app">Tic Toe Tie</a></li>
-        <li><a routerLink="/weather-app">Darshana</a></li>        
+        <li><a routerLink="/weather-app">Tic Toe Tie</a></li>       
       </ul>
     </li>
 
     <li><a routerLink="/contact">Contact</a></li>
+   <li> <button (click)="logout()">Logout</button></li>
+
   </ul>
 </nav>
 <router-outlet></router-outlet>
